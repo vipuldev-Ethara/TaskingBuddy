@@ -21,5 +21,16 @@ export default defineConfig({
         changeOrigin: true,
       }
     }
+  },
+  // Required for Railway's `npm run preview`
+  preview: {
+    host: '0.0.0.0',
+    port: parseInt(process.env.PORT) || 4173,
+    allowedHosts: 'all',
+  },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
   }
 })
+
