@@ -1,15 +1,8 @@
 [phases.setup]
-nixPkgs = ["python312", "gcc", "libpq"]
+nixPkgs = ["python312", "libpq"]
 
 [phases.install]
 cmds = ["pip install -r requirements.txt"]
 
-[phases.build]
-cmds = ["python manage.py collectstatic --no-input"]
-
 [start]
-cmd = "python manage.py migrate --no-input && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
-
-[variables]
-DJANGO_SETTINGS_MODULE = "config.settings.production"
-PYTHONUNBUFFERED = "1"
+cmd = "python manage.py migrate --no-input && python manage.py collectstatic --no-input && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
