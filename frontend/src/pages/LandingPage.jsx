@@ -11,7 +11,7 @@ const LandingPage = () => {
           <div className="bg-brand-500 p-2 rounded-lg text-white">
             <LayoutDashboard size={24} />
           </div>
-          <span className="text-xl font-bold tracking-tight">TaskFlow</span>
+          <span className="text-xl font-bold tracking-tight">TaskingBuddy</span>
         </div>
         <div className="flex items-center gap-4">
           <Link to="/login" className="text-sm font-medium hover:text-brand-500 transition-colors">
@@ -96,10 +96,10 @@ const LandingPage = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
             <LayoutDashboard size={20} className="text-brand-500" />
-            <span className="font-bold">TaskFlow</span>
+            <span className="font-bold">TaskingBuddy</span>
           </div>
           <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} TaskFlow. All rights reserved.
+            &copy; {new Date().getFullYear()} TaskingBuddy. All rights reserved.
           </p>
         </div>
       </footer>
