@@ -35,7 +35,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <div className="p-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold">
-              TM
+              TB
             </div>
             <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
               TaskingBuddy
